@@ -11,3 +11,7 @@ class AboutView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = "blog/contact.html"
+
+
+class PostView(TemplateView):
+    template_name = "blog/post.html"
