@@ -132,4 +132,5 @@ STATICFILES_FINDERS = [ # new
    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
