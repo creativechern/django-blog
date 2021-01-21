@@ -7,3 +7,7 @@ class HomepageView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = "blog/about.html"
+
+
+class ContactView(TemplateView):
+    template_name = "blog/contact.html"
