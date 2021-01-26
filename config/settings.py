@@ -10,8 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import dj_database_url
+import os
 from pathlib import Path
+
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,14 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'c!l8yuvuz*(=1+jfjz+5z9-_n=oao+t2mqj2$uoe04x4+q$^1b'
+#SECRET_KEY = 'c!l8yuvuz*(=1+jfjz+5z9-_n=oao+t2mqj2$uoe04x4+q$^1b'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-DEBUG = False
+DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['*']
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'young-dawn-09814.herokuapp.com']
 
 # Application definition
 
