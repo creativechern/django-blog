@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-
+from django.views.generic.edit import CreateView
+from .models import Post
 class HomepageView(TemplateView):
     template_name = "blog/index.html"
 
@@ -16,5 +17,7 @@ class ContactView(TemplateView):
 class PostView(TemplateView):
     template_name = "blog/post.html"
 
-class CreateView(TemplateView):
+class BlogCreateView(CreateView):
+    model = Post
     template_name = "blog/create.html"
+    fields = ['title', 'body']

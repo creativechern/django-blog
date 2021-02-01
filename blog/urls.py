@@ -5,5 +5,5 @@ urlpatterns = [
     path('about/', views.AboutView.as_view(), name="about"),
     path('contact/', views.ContactView.as_view(), name="contact"),
     path('post/', views.PostView.as_view(), name="post"),
-    path('create/', views.CreateView.as_view(), name="create"),
+    path('post/new/', views.BlogCreateView.as_view(), name="post_new"),
 ]
