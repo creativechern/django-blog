@@ -15,3 +15,6 @@ class ContactView(TemplateView):
 
 class PostView(TemplateView):
     template_name = "blog/post.html"
+
+class CreateView(TemplateView):
+    template_name = "blog/create.html"
