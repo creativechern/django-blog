@@ -6,6 +6,7 @@ from .forms import PostForm
 
 class BlogListView(ListView):
     model = Post
+    context_object_name = "all_post_list"
     template_name = "blog/index.html"
 
 class AboutView(TemplateView):
