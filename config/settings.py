@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',    #new
-    'django.contrib.staticfiles',    
+    'django.contrib.staticfiles', 
+    'users.apps.UsersConfig',   
 ]
 
 MIDDLEWARE = [
@@ -151,3 +152,5 @@ STATICFILES_FINDERS = [ # new
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #new
+
+AUTH_USER_MODEL = 'users.CustomUser'
