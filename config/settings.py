@@ -154,3 +154,6 @@ STATICFILES_FINDERS = [ # new
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #new
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
