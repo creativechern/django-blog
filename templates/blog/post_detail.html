@@ -3,8 +3,8 @@
   <div class="post-heading">
     <h1>{{ post.title }}</h1>
     <span class="meta">Posted by
-      <a href="#">Start Bootstrap</a>
-      on August 24, 2019</span>
+      {{ post.author }}
+      on {{ post.created }}</span>
   </div>
 {% endblock header %}
 
