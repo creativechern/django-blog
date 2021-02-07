@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',    #new
     'django.contrib.staticfiles', 
-    'users.apps.UsersConfig',   
+    'users.apps.UsersConfig',
+    'ckeditor',   
 ]
 
 MIDDLEWARE = [
