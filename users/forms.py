@@ -6,10 +6,11 @@ from .models import CustomUser
 
 
 class CustomUserCreationForm(UserCreationForm):
-
+    YEARS= [x for x in range(2021,1900,-1)]
+    date_of_birth = forms.DateField(widget=forms.SelectDateWidget(years=YEARS))
     class Meta(UserCreationForm):
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('date_of_birth',)
+        fields = UserCreationForm.Meta.fields + ('email', 'date_of_birth',)
 
 
 class CustomUserChangeForm(UserChangeForm):
