@@ -12,6 +12,7 @@
         <div class="control-group">
           <form action="" method="post">
             {% csrf_token %}
+            {{ form.media }}
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Create</button>
           </form>
