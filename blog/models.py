@@ -12,6 +12,8 @@ class Post(models.Model):
     )
     #body = models.TextField()
     body = RichTextField(blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.title
 
