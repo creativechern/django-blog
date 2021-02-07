@@ -12,13 +12,13 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         {% for post in all_post_list %}
         <div class="post-preview">
-          <a href="post.html">
+          <a href="{% url 'post_detail' post.id %}">
             <h2 class="post-title">
               {{ post.title }}
             </h2>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
+            {{ post.author }} 
             on September 24, 2019</p>
         </div>
         <hr>
